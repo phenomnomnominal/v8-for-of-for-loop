@@ -1,0 +1,14 @@
+{
+  "name": "v8-for-of-for-loop",
+  "version": "0.0.1",
+  "description": "Repro for v8 loop perf bug",
+  "main": "index.js",
+  "scripts": {
+    "for": "node --max_old_space_size=8192 for.js $I $J $K",
+    "forCache": "node --max_old_space_size=8192 for-cache.js $I $J $K",
+    "forOf": "node --max_old_space_size=8192 for-of.js $I $J $K",
+    "benchmark": "npm run forOf && npm run for && npm run forCache"
+  },
+  "author": "",
+  "license": "MIT"
+}
